@@ -1,10 +1,11 @@
 import React from 'react'
 import './footer.css'
-import { FaFacebookF } from 'react-icons/fa'
-import { FiInstagram } from 'react-icons/fi'
-import { IoLogoTwitter } from 'react-icons/io'
+import { BsLinkedin } from 'react-icons/bs'
+import { FaGithub } from 'react-icons/fa'
 
 import personalLinks from '../../configs/personalLinks.json'
+
+import pages from '../../configs/pages.json'
 
 const Footer = () => {
   return (
@@ -12,33 +13,38 @@ const Footer = () => {
       <a href="#" className='footer__logo'>HENRY LU</a>
 
       <ul className="permalinks">
+        {pages.includes('About') ? <li>
+          <a href='#about'>About</a>
+        </li> : null}
+        {pages.includes('Experience') ? <li>
+          <a href='#experience'>Experience</a>
+        </li> : null}
+        {pages.includes('Services') ? <li>
+          <a href='#services'>Services</a>
+        </li> : null}
+        {pages.includes('Portfolio') ? <li>
+          <a href='#portfolio'>Portfolio</a>
+        </li> : null}
+        {pages.includes('Testimonials') ? <li>
+          <a href='#testimonials'>Testimonials</a>
+        </li> : null}
+        {pages.includes('Contact') ? <li>
+          <a href='#contact'>Contact</a>
+        </li> : null}
         <li>
           <a href='#'>Home</a>
         </li>
-        <li>
-          <a href='#about'>About</a>
-        </li>
-        <li>
-          <a href='#experience'>Experience</a>
-        </li>
-        <li>
-          <a href='#services'>Services</a>
-        </li>
-        <li>
-          <a href='#portfolio'>Portfolio</a>
-        </li>
-        <li>
-          <a href='#testimonials'>Testimonials</a>
-        </li>
-        <li>
-          <a href='#contact'>Contact</a>
-        </li>
+
+
+
+
+
+
       </ul>
 
       <div className="footer__socials">
-        {personalLinks.facebook ? <a href={personalLinks.facebook}><FaFacebookF /></a> : null}
-        <a href="https://instagram.com"><FiInstagram /></a>
-        <a href="https://twitter.com"><IoLogoTwitter /></a>
+        {personalLinks.linkedin ? <a href={personalLinks.linkedin}><BsLinkedin /></a> : null}
+        {personalLinks.github ? <a href={personalLinks.github}><FaGithub /></a> : null}
       </div>
 
       <div className="footer__copyright">

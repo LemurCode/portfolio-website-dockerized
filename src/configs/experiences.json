@@ -1,0 +1,80 @@
+{
+    "frontend": [
+        {
+            "name": "React",
+            "level": "Expert"
+        },
+        {
+            "name": "JavaScript",
+            "level": "Expert"
+        },
+        {
+            "name": "HTML",
+            "level": "Expert"
+        },
+        {
+            "name": "CSS",
+            "level": "Expert"
+        }
+    ],
+    "backend": [
+        {
+            "name": "NodeJS",
+            "level": "Expert"
+        },
+        {
+            "name": "ExpressJS",
+            "level": "Expert"
+        },
+        {
+            "name": "Flask",
+            "level": "Intermediate"
+        },
+        {
+            "name": "Python",
+            "level": "Expert"
+        },
+        {
+            "name": "PostgreSQL",
+            "level": "Expert"
+        },
+        {
+            "name": "SSMS",
+            "level": "Expert"
+        },
+        {
+            "name": "MongoDB",
+            "level": "Expert"
+        },
+        {
+            "name": "Java",
+            "level": "Expert"
+        },
+        {
+            "name": "Docker",
+            "level": "Intermediate"
+        }
+    ],
+    "automation": [
+        {
+            "name": "Selenium",
+            "level": "Expert"
+        },
+        {
+            "name": "Robot Framework",
+            "level": "Expert"
+        },
+        {
+            "name": "Protractor Framework",
+            "level": "Expert"
+        },
+        {
+            "name": "TestNG Framework",
+            "level": "Expert"
+        },
+        {
+            "name": "Shell (Window/Unix)",
+            "level": "Intermediate"
+        }
+    ]
+}

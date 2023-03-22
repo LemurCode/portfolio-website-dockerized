@@ -1,9 +1,9 @@
 import React from 'react'
 import './about.css'
 import ME from '../../assets/about_me.jpg'
-import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from 'react-icons/vsc'
+import IFDS from '../../assets/IFDS_White.webp'
+import IBM from '../../assets/IBM.png'
+import RBC from '../../assets/RBC.png'
 
 const About = () => {
     return (
@@ -20,23 +20,32 @@ const About = () => {
                 <div className="about__content">
                     <div className="about__cards">
                         <article className="about__card">
-                            <FaAward className="about_icon" />
-                            <h5>Experience</h5>
-                            <small>3+ Years Working Experience</small>
+                            <img src={IFDS} alt="IFDS" className='.about__icon' />
+                            <div>
+                                <h5>Fullstack Developer</h5>
+                                <small>IFDS group</small>
+                            </div>
+
                         </article>
                         <article className="about__card">
-                            <FiUsers className="about_icon" />
-                            <h5>Clients</h5>
-                            <small>200+ Worldwide</small>
+                            <img src={IBM} alt="IBM" className='.about__icon' />
+                            <div>
+                                <h5>Fullstack Developer</h5>
+                                <small>IBM</small>
+                            </div>
                         </article>
                         <article className="about__card">
-                            <VscFolderLibrary className="about_icon" />
-                            <h5>Projects</h5>
-                            <small>80+ Completed Projects</small>
+                            <img src={RBC} alt="RBC" className='.about__icon' />
+                            <div>
+                                <h5>Automated QA</h5>
+                                <small>RBC</small>
+                            </div>
                         </article>
 
                     </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur architecto exercitationem dolorem obcaecati ratione consectetur totam quis dicta? Veniam dolorem natus tenetur similique quos suscipit et odit inventore, quis quo.</p>
+                    <p>Throughout my career, I have been fortunate to gain exposure to a wide range of software development areas, including front-end, back-end, automated QA, and UI/UX design. These experiences have all taken place in professional settings, enabling me to develop a well-rounded skill set.</p>
+                    <p>In addition to my technical abilities, I credit my success to my strong communication skills. I am adept at translating complex technical concepts into easy-to-understand language, which enables me to effectively communicate with stakeholders at all levels.</p>
+                    <p>I am excited to bring the wealth of knowledge and experience that I have gained from working in fast-paced organizations to better serve you.</p>
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
                 </div>
             </div>

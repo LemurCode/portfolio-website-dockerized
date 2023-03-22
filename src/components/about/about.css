@@ -38,6 +38,9 @@
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .about__card:hover {

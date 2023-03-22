@@ -5,6 +5,7 @@ import { RiMessengerLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import personalLinks from '../../configs/personalLinks.json'
 
 
 const Contact = () => {
@@ -33,27 +34,39 @@ const Contact = () => {
             <h2>Contact Me</h2>
             <div className="container contact__container">
                 <div className="contact__options">
-                    <article className="contact__option">
+                    {personalLinks.email ? <article className="contact__option">
                         <MdOutlineEmail className="contact__option-icon" />
                         <h4>Email</h4>
-                        <h5>dummyegator@gmail.com</h5>
-                        <a href="mailto:dummegator@gmail.com"
+                        <h5>{personalLinks.email}</h5>
+                        <a href={`mailto:${personalLinks.email}`}
                             target="_blank">Send a message</a>
-                    </article>
-                    <article className="contact__option">
+                    </article> : null}
+
+                    {personalLinks.messenger ? <article className="contact__option">
                         <RiMessengerLine className="contact__option-icon" />
                         <h4>Messenger</h4>
-                        <h5>egatortutorials</h5>
+                        <h5>Henry Lu</h5>
                         <a href="http://m.me/https://www.facebook.com/henry.lu.503"
                             target="_blank">Send a message</a>
-                    </article>
-                    <article className="contact__option">
+                    </article> : null}
+
+                    {personalLinks.whatsapp ? <article className="contact__option">
                         <BsWhatsapp className="contact__option-icon" />
                         <h4>WhatsApp</h4>
-                        <h5>+1-647-870-1267</h5>
-                        <a href="https://api.whatsapp.com/send?phone=16478701267"
+                        <h5>{personalLinks.whatsapp}</h5>
+                        <a href={`https://api.whatsapp.com/send?phone=${personalLinks.whatsapp}`}
                             target="_blank">Send a message</a>
-                    </article>
+                    </article> : null}
+
+                    {personalLinks.whatsapp ? <article className="contact__option">
+                        <BsWhatsapp className="contact__option-icon" />
+                        <h4>WhatsApp</h4>
+                        <h5>{personalLinks.whatsapp}</h5>
+                        <a href={`https://api.whatsapp.com/send?phone=${personalLinks.whatsapp}`}
+                            target="_blank">Send a message</a>
+                    </article> : null}
+
+
                 </div>
                 {/* END OF CONTACT OPTIONS */}
                 <form ref={form} onSubmit={sendEmail}>

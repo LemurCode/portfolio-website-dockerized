@@ -15,6 +15,8 @@ import Testimonials from './components/testimonials/Testimonials'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
+import pages from './configs/pages.json'
+
 
 const App = () => {
   const particlesInit = useCallback(async engine => {
@@ -39,12 +41,12 @@ const App = () => {
       />
       <Header />
       <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
+      {pages.includes('About') ? <About /> : null}
+      {pages.includes('Experience') ? <Experience /> : null}
+      {pages.includes('Services') ? <Services /> : null}
+      {pages.includes('Portfolio') ? <Portfolio /> : null}
+      {pages.includes('Testimonials') ? <Testimonials /> : null}
+      {pages.includes('Contact') ? <Contact /> : null}
       <Footer />
     </>
   )
