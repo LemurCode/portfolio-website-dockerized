@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './nav.css'
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiBook } from 'react-icons/bi'
 import { FaRegHandshake } from 'react-icons/fa'
 import { TbMessages } from 'react-icons/tb'
-import { useState } from 'react'
 
 import pages from '../../configs/pages.json'
 const Nav = () => {
     const [activeNav, setActive] = useState('#')
+    useEffect(() => {
+        // code to be executed when component mounts
+        window.addEventListener('wheel',
+            () => {
+                setActive('')
+            });
+
+        // optional cleanup function
+        return () => {
+        }
+    }, []); // empty dependency array means this effect only runs once on mount
     return (
         <nav>
             <a href="#"
