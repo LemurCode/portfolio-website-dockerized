@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   frontend:
-    image: kuantelu/portfolio-website
+    image: frontend-prod-i
     build:
       dockerfile: Dockerfile.prod
     container_name: frontend-prod-c
